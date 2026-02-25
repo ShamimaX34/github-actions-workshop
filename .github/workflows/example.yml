@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: '25'
 
+      - name : Lint check
+        run: npx standard --fix
+
       - name: Install dependencies
         run: npm install
 
