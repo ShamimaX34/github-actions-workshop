@@ -1,0 +1,14 @@
+name: task4
+
+on: 
+  issues:
+    types: [opened] 
+
+jobs:
+  task4:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Show messages"
+      run: |
+        echo "The issue is called ${{github.event.issue.title}}" 
+        echo "The user who opened an issue is ${{github.event.issue.actor}}"
